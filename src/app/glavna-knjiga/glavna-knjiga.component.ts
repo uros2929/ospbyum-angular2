@@ -53,46 +53,13 @@ export class GlavnaKnjigaComponent implements OnInit {
     
     }
     let noviBilansStanja = {
-      nazivAktiva1: textA1.value,
-      brojAktiva1: brA1.value,
-      nazivAktiva2: textA2.value,
-      brojAktiva2: brA2.value,
-      nazivAktiva3: textA3.value,
-      brojAktiva3: brA3.value,
-      nazivAktiva4: textA4.value,
-      brojAktiva4: brA4.value,
-      nazivAktiva5: textA5.value,
-      brojAktiva5: brA5.value,
-      nazivAktiva6: textA6.value,
-      brojAktiva6: brA6.value,
-      nazivAktiva7: textA7.value,
-      brojAktiva7: brA7.value,
-      nazivAktiva8: textA8.value,
-      brojAktiva8: brA8.value,
-      nazivAktiva9: textA9.value,
-      brojAktiva9: brA9.value,
-      nazivAktiva10: textA10.value,
-      brojAktiva10: brA10.value,
-      nazivPasiva1: textP1.value,
-      brojPasiva1: brP1.value,
-      nazivPasiva2: textP2.value,
-      brojPasiva2: brP3.value,
-      nazivPasiva3: textP3.value,
-      brojPasiva3: brP3.value,
-      nazivPasiva4: textP4.value,
-      brojPasiva4: brP4.value,
-      nazivPasiva5: textP5.value,
-      brojPasiva5: brP5.value,
-      nazivPasiva6: textP6.value,
-      brojPasiva6: brP6.value,
-      nazivPasiva7: textP7.value,
-      brojPasiva7: brP7.value,
-      nazivPasiva8: textP8.value,
-      brojPasiva8: brP8.value,
-      nazivPasiva9: textP9.value,
-      brojPasiva9: brP9.value,
-      nazivPasiva10: textP10.value,
-      brojPasiva10: brP10.value
+      nazivAktiva1: textA1.value,brojAktiva1: brA1.value,nazivAktiva2: textA2.value,brojAktiva2: brA2.value,nazivAktiva3: textA3.value,brojAktiva3: brA3.value,nazivAktiva4: textA4.value,brojAktiva4: brA4.value,
+      nazivAktiva5: textA5.value,brojAktiva5: brA5.value,nazivAktiva6: textA6.value,brojAktiva6: brA6.value,nazivAktiva7: textA7.value,brojAktiva7: brA7.value,nazivAktiva8: textA8.value,brojAktiva8: brA8.value,
+      nazivAktiva9: textA9.value,brojAktiva9: brA9.value,nazivAktiva10: textA10.value,brojAktiva10: brA10.value,
+
+      nazivPasiva1: textP1.value,brojPasiva1: brP1.value,nazivPasiva2: textP2.value,brojPasiva2: brP3.value,nazivPasiva3: textP3.value,brojPasiva3: brP3.value,nazivPasiva4: textP4.value,brojPasiva4: brP4.value,
+      nazivPasiva5: textP5.value,brojPasiva5: brP5.value,nazivPasiva6: textP6.value,brojPasiva6: brP6.value,nazivPasiva7: textP7.value,brojPasiva7: brP7.value,nazivPasiva8: textP8.value,brojPasiva8: brP8.value,
+      nazivPasiva9: textP9.value,brojPasiva9: brP9.value,nazivPasiva10: textP10.value,brojPasiva10: brP10.value
     }
     glavnaKnjigaBilansStanja[bsp.value] = noviBilansStanja;
     this.funkcijeSabloni.setToLocalStorage('glavnaKnjigaBilansStanja', glavnaKnjigaBilansStanja);
