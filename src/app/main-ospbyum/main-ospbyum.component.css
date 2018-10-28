@@ -1,0 +1,31 @@
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.naslov{
+  color: white;
+  cursor: pointer;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 600;
+ 
+}
+.naslovLink{
+  text-decoration: none;
+  margin: 0 auto;
+}

@@ -1,0 +1,31 @@
+<div class="digitronInput">
+<input type="text" #inputZaBrojeve>
+</div>
+<div class="digitronDugmici">
+  <button (click)="resetujInput($event,inputZaBrojeve)">C</button>
+  <button  value="(" (click)="clickNaDugme($event,inputZaBrojeve)">(</button>
+  <button  value=")" (click)="clickNaDugme($event,inputZaBrojeve)">)</button>
+  <br>
+  <button value="7" (click)="clickNaDugme($event,inputZaBrojeve)">7</button>
+  <button value="8" (click)="clickNaDugme($event,inputZaBrojeve)">8</button>
+  <button  value="9" (click)="clickNaDugme($event,inputZaBrojeve)">9</button>
+
+  <button value="+" (click)="clickNaDugme($event,inputZaBrojeve)">+</button>
+  <br>
+
+  <button value="4" (click)="clickNaDugme($event,inputZaBrojeve)">4</button>
+  <button value="5" (click)="clickNaDugme($event,inputZaBrojeve)">5</button>
+  <button value="6" (click)="clickNaDugme($event,inputZaBrojeve)">6</button>
+  <button value="-" (click)="clickNaDugme($event,inputZaBrojeve)">-</button>
+  <br>
+  <button value="1" (click)="clickNaDugme($event,inputZaBrojeve)">1</button>
+  <button value="2" (click)="clickNaDugme($event,inputZaBrojeve)">2</button>
+  <button  value="3" (click)="clickNaDugme($event,inputZaBrojeve)">3</button>
+  <button  value="*" (click)="clickNaDugme($event,inputZaBrojeve)">X</button>
+  <br>
+
+  <button value="0" (click)="clickNaDugme($event,inputZaBrojeve)">0</button>
+  <button  value="." (click)="clickNaDugme($event,inputZaBrojeve)">.</button>
+  <button  (click)="racunanje($event,inputZaBrojeve)">=</button>
+<button value="/" (click)="clickNaDugme($event,inputZaBrojeve)">/</button>
+</div>

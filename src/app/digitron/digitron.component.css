@@ -1,0 +1,29 @@
+.digitronInput input{
+   width: 40%;
+   font-size: 28px;
+   margin: 0 auto;
+   display: block;
+   margin-top: 2%;
+   background-color: rgb(66, 66, 66);
+   color: white;
+   border: solid 3px rgb(72,181,140);
+}
+.digitronDugmici{
+    display:table;
+    margin: auto;
+    margin-top: 2%;
+    text-align: center;
+}
+.digitronDugmici button{
+    width: 70px;
+    height: 70px; 
+    border: solid 3px rgb(72,181,140);
+    border-radius: 25%;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    font-size: 24px;
+}
+.digitronDugmici button:hover{
+    background-color:rgb(72,181,140);
+    border-color: rgb(48, 48, 48); 
+}

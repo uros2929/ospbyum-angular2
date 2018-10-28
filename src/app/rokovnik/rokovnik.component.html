@@ -1,0 +1,15 @@
+<form action="?" (submit)="onSubmit($event)"> 
+  <input type="text"  placeholder="Upiši novu obavezu" class="rokovnikInput" >
+  <input type="submit" value="Postavi" class="rokovnikDugmePostaviStavku">
+</form>
+<div id="mainRokovnik">
+  <ul class="rokovnikUl">
+    <li *ngFor="let stavka of rokovnikStavka " class="rokovnikLi">
+      {{stavka}} <em (click)="izbrisiStavku($event)" id={{stavka}}>izbrisi</em>
+    </li>
+  </ul>
+</div>
+<footer>
+  <button (click)="izbrisiSveStavke($event)">Izbrisi sve</button>
+  <button>Stampanje</button>
+</footer>

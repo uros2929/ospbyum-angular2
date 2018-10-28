@@ -1,0 +1,79 @@
+.naslovGlavnaKnjiga{
+    display: table;
+    margin: auto;
+    margin-top: 1%;
+}
+.naslovGlavnaKnjiga label,.naslovGlavnaKnjiga input{
+    font-size: 20px;
+}
+.formaAktiva{
+    width: 50%;
+    position: relative;
+    float: left;
+    min-height: 250px;
+    margin-top: 2%;
+}
+.formaAktiva form{
+   position: relative;
+   float: right;
+   margin-right: 1%;
+}
+.formaPasiva{
+    width: 50%;
+    position: relative;
+    float: right;
+    min-height: 250px;
+    margin-top: 2%;
+}
+.formaPasiva form{
+    position: relative;
+    float: left;
+    margin-left: 1%;
+}
+.aktivaNaslov{
+width: 50%;
+position: relative;
+float: left;
+text-align: center;
+}
+.pasivaNaslov{
+width: 50%;
+position: relative;
+float: right;
+text-align: center;
+}
+.rezultatAktivaTekst{
+width: 44%;
+position: relative;
+float: left;
+text-align: right;
+margin-right: 6%;
+
+}
+.rezultatPasivaTekst{
+width: 44%;
+position: relative;
+float:right;
+text-align: left;
+margin-left: 6%;
+}
+.sacuvaniBilansiStanja{
+width: 49%;
+position: relative;
+float: left;
+border:solid 2px rgb(194, 24, 91);
+min-height: 300px;
+margin-top: 1%;
+}
+.dugmiciBilansaStanja{
+width: 50%;
+position: relative;
+float:right;
+margin-top: 1%;
+}
+.bilansStanjaLi{
+    cursor: pointer;
+}
+.bilansStanjaLi:hover{
+    color: rgb(194, 24, 91);
+}
