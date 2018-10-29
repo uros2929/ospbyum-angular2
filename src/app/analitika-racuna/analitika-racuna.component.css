@@ -1,0 +1,121 @@
+.formaAnalitikeRacuna{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
+    width: 100%;
+}
+.formaAnalitikeRacuna input{
+    width: 20%;
+    font-size: 18px;
+    margin-left: 1%;
+}
+.formaAnalitikeRacuna input[type="date"]{
+    width: 10%;
+    font-size: 24px;
+}
+.formaAnalitikeRacuna input[type="submit"]{
+    margin-top: 1%;
+    margin-left: 30%;
+    font-size: 20px;
+    border-radius: 10px;
+    border-left: none;
+    border-right: none;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    border-top: solid rgb(194, 24, 91) 3px;
+    border-bottom: solid rgb(194, 24, 91) 3px;
+    cursor: pointer;
+}
+.formaAnalitikeRacuna input[type="submit"]:hover{
+    border-top: solid rgb(48, 48, 48);
+    border-bottom: solid rgb(48, 48, 48);
+    background-color: rgb(194, 24, 91);  
+}
+.prikazSacuvanihAnalitika{
+    position: relative;
+    float: left;
+    width: 30%;
+    margin-left: 5%;
+    margin-top: 2%;
+    min-height: 500px;
+    overflow-y: scroll;
+    border: solid 2px rgb(194, 24, 91); 
+}
+.prikazSacuvanihAnalitika li{
+display: flex;
+flex-direction: row;
+list-style: none;
+width: 100%;
+text-align: end
+}
+.prikazSacuvanihAnalitika p{
+cursor: pointer;
+width: 30%;
+}
+.prikazSacuvanihAnalitika em{
+    width: 20%;
+  margin-top: 3%;
+  margin-left: 2%;
+  cursor: pointer;
+}
+.prikazSacuvanihAnalitika p:hover{
+    color: rgb(194, 24, 91)
+}
+.prikazSacuvanihAnalitika em:hover{
+    color: rgb(72,181,140);
+}
+.prikazDateAnalitike{
+    position: relative;
+    float: right;
+    width:50%;
+    margin-right: 5%;
+    margin-top: 2%;
+    min-height: 500px;
+    overflow-y: scroll;
+    border: solid 2px rgb(194, 24, 91);
+}
+.prikazPodataka{
+    width: 100%;
+}
+.prikazPodataka h1{
+    position: relative;
+    float:left;
+    width: 50%;
+    margin-left: 1%;
+}
+.prikazPodataka h2{
+    position: relative;
+    float:right;
+    width: 49%;
+}
+.prikazDijagrama{
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    width: 50%;
+    height: 350px;
+}
+#grafickiDugovanje{
+    display: none;
+    background-color: rgb(194, 24, 91);
+    border-bottom: none;
+    width: 10%;
+    position: absolute;
+    left: 39%;
+    bottom: 0;
+}
+#grafickiPotrazivanje{
+    display: none;
+    background-color: rgb(72,181,140);
+    border-bottom: none;
+    width: 10%;
+    position: absolute;
+    right:39%;
+    bottom: 0; 
+}
+#izvucenDuguje{
+    color: rgb(194, 24, 91)
+}
+#izvucenPotrazuje{
+    color: rgb(72,181,140)
+}

@@ -5,7 +5,7 @@
   <div class="pasivaNaslov"><h3>PASIVA</h3></div>
 </div>
 <div class="formaAktiva">
-<form action="?">
+<form action="?" method="POST">
 <input type="text" placeholder="Upiši naziv" #textA1>
 <input type="number" value="0" #brA1 (input)="racunanjeAktiveiPasive(brA1, brA2, brA3, brA4, brA5, brA6, brA7, brA8, brA9, brA10, brP1, brP2, brP3, brP4, brP5, brP6, brP7, brP8, brP9, brP10)"><br>
 <input type="text" placeholder="Upiši naziv" #textA2>
@@ -29,7 +29,7 @@
 </form>
 </div>
 <div class="formaPasiva">
-<form action="?">
+<form action="?" method="POST">
   <input type="text" placeholder="Upiši naziv" #textP1>
   <input type="number" value="0" #brP1 (input)="racunanjeAktiveiPasive(brA1, brA2, brA3, brA4, brA5, brA6, brA7, brA8, brA9, brA10, brP1, brP2, brP3, brP4, brP5, brP6, brP7, brP8, brP9, brP10)"><br>
   <input type="text" placeholder="Upiši naziv" #textP2>
@@ -58,14 +58,15 @@
 <br>
 <div class="sacuvaniBilansiStanja">
   <ul>
-    <li *ngFor="let bilans of sacuvaniBilans" class="bilansStanjaLi" id="{{bilans}}" (click)="prikazPodatakaIzSacuvanihBilansa($event,bsp, brA1, brA2, brA3, brA4, brA5, brA6, brA7, brA8, brA9, brA10, brP1, brP2, brP3, brP4, brP5, brP6, brP7, brP8, brP9, brP10, textA1, textA2, textA3, textA4, textA5, textA6, textA7, textA8, textA9, textA10, textP1, textP2, textP3, textP4, textP5, textP6, textP7, textP8, textP9, textP10)">
-      {{bilans}}
+    <li *ngFor="let bilans of sacuvaniBilans" class="bilansStanjaLi" title="Prikazi bilans stanja za datum">
+     <p id="{{bilans}}" (click)="prikazPodatakaIzSacuvanihBilansa($event,bsp, brA1, brA2, brA3, brA4, brA5, brA6, brA7, brA8, brA9, brA10, brP1, brP2, brP3, brP4, brP5, brP6, brP7, brP8, brP9, brP10, textA1, textA2, textA3, textA4, textA5, textA6, textA7, textA8, textA9, textA10, textP1, textP2, textP3, textP4, textP5, textP6, textP7, textP8, textP9, textP10)">{{bilans}}</p>
+      <em (click)="izbrisiBilansStanja($event)" title="Izbrisi bilans stanja za datum" id="{{bilans}}">izbrisi</em>
     </li>
   </ul>
 </div>
 <div class="dugmiciBilansaStanja">
   <button (click)="resetForms(bsp,$event, brA1, brA2, brA3, brA4, brA5, brA6, brA7, brA8, brA9, brA10, brP1, brP2, brP3, brP4, brP5, brP6, brP7, brP8, brP9, brP10, textA1, textA2, textA3, textA4, textA5, textA6, textA7, textA8, textA9, textA10, textP1, textP2, textP3, textP4, textP5, textP6, textP7, textP8, textP9, textP10)">RESET</button>
   <br>
-  <button (click)="sacuvajGlavnuKnjigu(bsp,brA1, brA2, brA3, brA4, brA5, brA6, brA7, brA8, brA9, brA10, brP1, brP2, brP3, brP4, brP5, brP6, brP7, brP8, brP9, brP10,textA1,textA2,textA3,textA4,textA5,textA6,textA7,textA8,textA9,textA10,textP1,textP2,textP3,textP4,textP5,textP6,textP7,textP8,textP9,textP10)">SACUVAJ</button>
+  <button (click)="sacuvajGlavnuKnjigu($event,bsp,brA1, brA2, brA3, brA4, brA5, brA6, brA7, brA8, brA9, brA10, brP1, brP2, brP3, brP4, brP5, brP6, brP7, brP8, brP9, brP10,textA1,textA2,textA3,textA4,textA5,textA6,textA7,textA8,textA9,textA10,textP1,textP2,textP3,textP4,textP5,textP6,textP7,textP8,textP9,textP10)">SACUVAJ</button>
 </div>
 </div>

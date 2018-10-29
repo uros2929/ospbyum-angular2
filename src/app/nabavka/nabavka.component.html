@@ -1,3 +1,18 @@
-<p>
-  nabavka works!
-</p>
+<div class="nalogZaNabavku">
+  <a routerLink="/nalogZaNabavku" target="_blank" title="Otvori nalog za nabavku">Nalog za Nabavku</a>
+</div>
+<div class="formaNabavka" (submit)="sacuvajDobavljaca($event)">
+  <form action="?" method="POST" id="kontaktSaDobavljacima">
+    <input type="email" id="emailDobavljaca" name="emailDobavljaca" placeholder="email dobavljača">
+    <br>
+    <input type="submit" value="Dodaj dobavljača">
+</form>
+</div>
+<div class="ispisEmailNabavka">
+  <ul>
+    <li *ngFor="let noviDobavljac of dobavljac ">
+      <a href="mailto:{{noviDobavljac}}" title="Posalji mail">{{noviDobavljac}}</a>
+      <em (click)="izbrisiDobavljaca($event)" id="{{noviDobavljac}}">izbrisi</em>
+    </li>
+  </ul>
+</div>

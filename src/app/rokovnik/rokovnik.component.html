@@ -5,7 +5,8 @@
 <div id="mainRokovnik">
   <ul class="rokovnikUl">
     <li *ngFor="let stavka of rokovnikStavka " class="rokovnikLi">
-      {{stavka}} <em (click)="izbrisiStavku($event)" id={{stavka}}>izbrisi</em>
+      {{stavka}} 
+      <em (click)="izbrisiStavku($event)" id={{stavka}}>izbrisi</em>
     </li>
   </ul>
 </div>

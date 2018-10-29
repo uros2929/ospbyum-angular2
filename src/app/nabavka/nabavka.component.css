@@ -1,0 +1,75 @@
+.nalogZaNabavku{
+    display: table;
+    margin: auto;
+    margin-top: 1%;
+}
+.nalogZaNabavku a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+}
+.nalogZaNabavku a:hover{
+    color: rgb(194, 24, 91);
+}
+.formaNabavka{
+    display: block;
+    margin: auto;
+    margin-top: 1%;
+    width: 100%;
+}
+.formaNabavka input[type="email"]{
+    width: 30%;
+    font-size: 18px;
+    margin-left: 35%;
+}
+.formaNabavka input[type="submit"]{
+    width: 16%;
+    font-size: 18px;
+    margin-left: 42%;
+    margin-top: 1%;
+    border-radius: 10px;
+    border-left: none;
+    border-right: none;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    border-top: solid rgb(194, 24, 91) 3px;
+    border-bottom: solid rgb(194, 24, 91) 3px;
+    cursor: pointer;
+}
+.formaNabavka input[type="submit"]:hover{
+    border-top: solid rgb(48, 48, 48);
+    border-bottom: solid rgb(48, 48, 48);
+    background-color: rgb(194, 24, 91);  
+}
+.ispisEmailNabavka{
+    display: block;
+    margin-left: 35%;
+    width: 30%;
+    min-height: 500px;
+    margin-top: 2%;
+    border: solid 2px rgb(194, 24, 91);
+    text-align: center;
+    overflow-y: scroll;
+
+}
+.ispisEmailNabavka li{
+    list-style: none;
+    margin-top: 1%;
+}
+.ispisEmailNabavka a{
+    text-decoration: none;
+    color: white
+}
+.ispisEmailNabavka a:hover{
+    color: rgb(194, 24, 91);
+}
+.ispisEmailNabavka em{
+    position: relative;
+    float: right;
+    margin-right: 1%;
+    cursor: pointer;
+}
+.ispisEmailNabavka em:hover{
+    color: rgb(72,181,140);
+}

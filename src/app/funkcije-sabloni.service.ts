@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { element } from '@angular/core/src/render3';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +18,9 @@ export class FunkcijeSabloniService {
   }
   potvrda(){
     return confirm("Da li ste sigurni ?")
+  }
+  getElement(element){
+  return document.getElementById(element)
   }
   
 }

@@ -1,3 +1,30 @@
-<p>
-  analitika-racuna works!
-</p>
+<div class="formaAnalitikeRacuna">
+  <form action="?" method="post" (submit)="sacuvajAnalitikuRacuna($event)">
+    <input type="date" name="datum">
+    <input type="text" name="stranka"  placeholder="Naziv stranke">
+    <input type="number" name="duguje" placeholder="Duguje">
+    <input type="number" name="potrazuje"  placeholder="Potražuje">
+    <br>
+    <input type="submit" value="Sačuvaj" (submit)="sacuvajAnalitikuRacuna($event)">
+  </form>
+</div>
+<div class="prikazSacuvanihAnalitika">
+  <ul>
+    <li *ngFor="let analitika of analitikaRacuna">
+        <p id="{{analitika}}" (click)="prikaziSacuvanuAnalitiku($event)">{{analitika}}</p> 
+        <em id="{{analitika}}" (click)="izbrisiSacuvanuAnalitiku($event)">izbrisi</em>
+    </li>
+  </ul>
+</div>
+<div class="prikazDateAnalitike">
+  <div class="prikazPodataka">
+  <h1>Datum:</h1><h2 id="izvucenDatum"></h2>
+  <h1>Naziv stranke:</h1><h2 id="izvucenNazivStranke"></h2>
+  <h1>Duguje:</h1><h2 id="izvucenDuguje"></h2>
+  <h1>Potražuje:</h1><h2 id="izvucenPotrazuje"></h2>
+</div>
+</div>
+<div class="prikazDijagrama">
+<div id="grafickiDugovanje"><h3 id="kolicinaDuguje"></h3></div>
+<div id="grafickiPotrazivanje"><h3 id="kolicinaPotrazuje"></h3></div>
+</div>
