@@ -1,0 +1,16 @@
+.kontaktInformacije{
+    height: 600px;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.kontaktInformacije a{
+  color: white;
+  text-decoration: none;
+  cursor: pointer; 
+}
+.kontaktInformacije a:hover{
+    color: rgb(194, 24, 91);
+}
