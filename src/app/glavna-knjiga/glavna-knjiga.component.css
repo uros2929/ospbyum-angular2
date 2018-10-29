@@ -6,38 +6,31 @@
 .naslovGlavnaKnjiga label,.naslovGlavnaKnjiga input{
     font-size: 20px;
 }
+.formaAktivaiPasiva{
+    width: 100%;
+    display: inline;
+}
 .formaAktiva{
-    width: 50%;
+    width: 17%;
+    margin-left: 33%;
     position: relative;
     float: left;
-    min-height: 250px;
-    margin-top: 2%;
-}
-.formaAktiva form{
-   position: relative;
-   float: right;
-   margin-right: 1%;
 }
 .formaPasiva{
-    width: 50%;
+    width: 17%;
     position: relative;
     float: right;
-    min-height: 250px;
-    margin-top: 2%;
-}
-.formaPasiva form{
-    position: relative;
-    float: left;
-    margin-left: 1%;
+    margin-right: 32%;
+ 
 }
 .aktivaNaslov{
-width: 50%;
+width: 40%;
 position: relative;
 float: left;
 text-align: center;
 }
 .pasivaNaslov{
-width: 50%;
+width: 40%;
 position: relative;
 float: right;
 text-align: center;
@@ -48,7 +41,7 @@ position: relative;
 float: left;
 text-align: right;
 margin-right: 6%;
-
+margin-top: 1%;
 }
 .rezultatPasivaTekst{
 width: 44%;
@@ -56,6 +49,7 @@ position: relative;
 float:right;
 text-align: left;
 margin-left: 6%;
+margin-top: 1%;
 }
 .sacuvaniBilansiStanja{
 width: 49%;
@@ -64,16 +58,38 @@ float: left;
 border:solid 2px rgb(194, 24, 91);
 min-height: 300px;
 margin-top: 1%;
-overflow-y: scroll;
 }
-.dugmiciBilansaStanja{
-width: 50%;
-position: relative;
-float:right;
-margin-top: 1%;
+.sacuvaniBilansiStanja p{
+    width: 30%;
+    position: relative;
+    float: left;
+    margin-left: 1%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    cursor: pointer;
 }
-.dugmiciBilansaStanja button{
-    font-size: 24px;
+.sacuvaniBilansiStanja p:hover{
+    color: rgb(194, 24, 91);
+}
+.sacuvaniBilansiStanja em{
+    width: 20%;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+.sacuvaniBilansiStanja em:hover{
+    color: rgb(72,181,140);
+}
+.dugmiciForma{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.dugmeResetuj,.dugmeSacuvaj{
+    width: 10%;
+    margin: 0 auto;
+    margin-top: 1%;
     border-radius: 10px;
     border-left: none;
     border-right: none;
@@ -81,31 +97,17 @@ margin-top: 1%;
     color: white;
     border-top: solid rgb(194, 24, 91) 3px;
     border-bottom: solid rgb(194, 24, 91) 3px;
-    margin-top: 1%;
+    font-size: 20px;
     cursor: pointer;
 }
-.dugmiciBilansaStanja button:hover{
+.dugmeResetuj:hover,.dugmeSacuvaj:hover{
     border-top: solid rgb(48, 48, 48);
     border-bottom: solid rgb(48, 48, 48);
     background-color: rgb(194, 24, 91);  
 }
-.sacuvaniBilansiStanja li{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+.bilansStanjaLi{
+    cursor: pointer;
 }
-.sacuvaniBilansiStanja p{
-cursor: pointer;
-width: 30%;
-}
-.sacuvaniBilansiStanja p:hover{
+.bilansStanjaLi:hover{
     color: rgb(194, 24, 91);
 }
-.bilansStanjaLi em{
-    margin-top: 2%;
-    margin-left: 20%;
-}
-.bilansStanjaLi em:hover{
-    color: rgb(72,181,140);
-}
-
