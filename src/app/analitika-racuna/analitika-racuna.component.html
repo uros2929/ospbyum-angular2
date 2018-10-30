@@ -9,7 +9,8 @@
   </form>
 </div>
 <div class="prikazSacuvanihAnalitika">
-  <ul>
+  <ul id="analitikaUl">
+      <input type="text" class="inputPretrazi" placeholder="Pretrazi racune ..." (keyup)="pretrazi(analitikaInput)" #analitikaInput>
     <li *ngFor="let analitika of analitikaRacuna">
         <p id="{{analitika}}" (click)="prikaziSacuvanuAnalitiku($event)">{{analitika}}</p> 
         <em id="{{analitika}}" (click)="izbrisiSacuvanuAnalitiku($event)">izbrisi</em>

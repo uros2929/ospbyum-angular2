@@ -50,6 +50,19 @@ if (this.funkcijeSabloni.potvrda()===false) {
   alert('Uspesno izbrisan dobavljac !')
   this.prikazNovogDobavljacaOnSubmit();
 }
-
+}
+pretrazi(dobavljacInput){
+  let filter=dobavljacInput.value,
+      ul = document.getElementById('nabavkaUl'),
+      li=ul.getElementsByTagName('li');
+   for (let index = 0; index < li.length; index++) {
+     let a=li[index].getElementsByTagName('A')[0];
+    if (a.innerHTML.indexOf(filter)>-1) {
+      li[index].style.display=""
+    }else{
+      li[index].style.display="none"
+    }
+   
+   }
 }
 }

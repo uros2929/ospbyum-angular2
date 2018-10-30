@@ -7,9 +7,10 @@
     <br>
     <input type="submit" value="Dodaj dobavljača">
 </form>
-</div>
+</div><br>
+<input type="text" class="inputPretrazi" placeholder="Pretrazi dobavljace ..." (keyup)="pretrazi(dobavljacInput)" #dobavljacInput>
 <div class="ispisEmailNabavka">
-  <ul>
+  <ul id="nabavkaUl">
     <li *ngFor="let noviDobavljac of dobavljac ">
       <a href="mailto:{{noviDobavljac}}" title="Posalji mail">{{noviDobavljac}}</a>
       <em (click)="izbrisiDobavljaca($event)" id="{{noviDobavljac}}">izbrisi</em>

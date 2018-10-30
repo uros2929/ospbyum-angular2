@@ -1,3 +1,38 @@
-<p>
-  knjizenje-robe works!
-</p>
+<div class="divForma">
+<form action="?" method="POST" (submit)="sacuvajNoviProizvod($event)">
+  <label for="sifraProizvoca">Šifra proizvoda : </label>
+  <br>
+  <input type="text" name="sifraProizvoda" #sifraProizvodaInput>
+  <br>
+  <label for="nazivProizvoda">Naziv : </label>
+  <br>
+  <input type="text" name="nazivProizvoda" #nazivProizvodaInput>
+  <br>
+  <label for="kolicinaProizvoda">Količina : </label>
+  <br>
+  <input type="number" name="kolicinaProizvoda" #kolicinaProizvodaInput>
+  <br>
+  <label for="opisProizvod">Opis : </label>
+  <br>
+  <textarea name="opisProizvod" cols="30" rows="10" #opisProizvodInput></textarea>
+  <br>
+  <input type="reset" value="Reset">
+  <input type="submit" value="Dodaj proizvod">
+</form>
+</div>
+<input type="text" class="inputPretrazi" placeholder="Pretrazi robu ..." (keyup)="pretrazi(robaInput)" #robaInput><br><br><br>
+<div class="prikazSacuvanihProizvoda">
+  <ul id="robaUl">
+    <li *ngFor="let roba of sacuvanaRoba">
+      <p (click)="prikaziProizvodIzmeniProizvod($event,sifraProizvodaInput,nazivProizvodaInput,kolicinaProizvodaInput,opisProizvodInput)" id="{{roba}}">{{roba}}</p> 
+      <div class="dugmiciIzbirisiIzmeni"><em (click)="prikaziProizvodIzmeniProizvod($event,sifraProizvodaInput,nazivProizvodaInput,kolicinaProizvodaInput,opisProizvodInput)" id="{{roba}}">izmeni</em> 
+      <em (click)="izbrisiProizvod($event)" id="{{roba}}">izbrisi</em> </div>
+    </li>
+  </ul>
+</div>
+<div class="prikazSacuvanogProizvoda">
+    <h2>Šifra proizvoda: {{sifraProizvoda}} </h2>
+    <h3>Naziv: {{nazivProizvoda}} </h3>
+    <h3>Količina: {{kolicinaProizvoda}}</h3>
+    <h3>Opis: {{opisProizvoda}}</h3>
+</div>
