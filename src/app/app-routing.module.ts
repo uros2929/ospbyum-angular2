@@ -9,9 +9,11 @@ import { AnalitikaRacunaComponent } from './analitika-racuna/analitika-racuna.co
 import { DokumentaComponent } from './dokumenta/dokumenta.component';
 import { KnjizenjeRobeComponent } from './knjizenje-robe/knjizenje-robe.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
+import { CitatiComponent } from './citati/citati.component';
 
 
 const routes: Routes = [
+  { path: '', component: CitatiComponent },
   { path: 'Kalendar', component: KalendarComponent },
   { path: 'Rokovnik', component: RokovnikComponent },
   { path: 'Digitron', component: DigitronComponent },

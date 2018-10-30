@@ -1,0 +1,17 @@
+.citatiDiv{
+    width: 25%;
+    height: 750px;
+    margin-left: 38%;
+    color: white;
+   
+}
+#citatiIspisMesto{
+    width: 90%;
+    position: relative;
+    top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 42px;
+    font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+   
+}

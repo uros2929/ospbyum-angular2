@@ -16,6 +16,7 @@ import { AnalitikaRacunaComponent } from './analitika-racuna/analitika-racuna.co
 import { DokumentaComponent } from './dokumenta/dokumenta.component';
 import { KnjizenjeRobeComponent } from './knjizenje-robe/knjizenje-robe.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
+import { CitatiComponent } from './citati/citati.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { KontaktComponent } from './kontakt/kontakt.component';
     AnalitikaRacunaComponent,
     DokumentaComponent,
     KnjizenjeRobeComponent,
-    KontaktComponent
+    KontaktComponent,
+    CitatiComponent
   ],
   imports: [
     BrowserModule,
