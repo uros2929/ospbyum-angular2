@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FunkcijeSabloniService } from '../funkcije-sabloni.service';
 
 @Component({
   selector: 'app-citati',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CitatiComponent implements OnInit {
 
-  constructor() { }
+  brojDobavljacaInfoIspis=this.brojDobavljacaInfo();
+  brojRacunaIzAnalitikeInfoIspis=this.brojRacunaIzAnalitikeInfo();
+  brojPostojecihProizvodaInfoIspis=this.brojPostojecihProizvodaInfo();
+
+  constructor( private funkcijeSabloni:FunkcijeSabloniService) { }
 
   ngOnInit() {
     this.citatiRandom()
@@ -88,5 +93,26 @@ export class CitatiComponent implements OnInit {
     citatiIspisMesto=document.getElementById('citatiIspisMesto'),
     citatIspis=citati[randomCitat];
     citatiIspisMesto.innerHTML=citatIspis;
+  }
+  brojDobavljacaInfo(){
+    let brojDobavljacaObjekat=this.funkcijeSabloni.getFromLocalStorage('Dobavljaci'),
+        brojDobavljacaNiz=Object.keys(brojDobavljacaObjekat)
+    return brojDobavljacaNiz.length;
+  }
+  brojRacunaIzAnalitikeInfo(){
+    let brojRacunaObjekat=this.funkcijeSabloni.getFromLocalStorage('analitikaRacuna'),
+    brojRacunaNiz=Object.keys(brojRacunaObjekat);
+    return brojRacunaNiz.length;
+
+  }
+  brojPostojecihProizvodaInfo(){
+    let brojRobaObjekat=this.funkcijeSabloni.getFromLocalStorage('sacuvanaRoba'),
+    brojRobaNiz=Object.keys(brojRobaObjekat);
+    return brojRobaNiz.length
+
+  }
+  precicaZaNabavku(event){
+    event.preventDefault();
+    console.log('aaaa')
   }
 }

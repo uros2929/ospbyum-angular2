@@ -1,17 +1,33 @@
 .citatiDiv{
-    width: 25%;
-    height: 750px;
-    margin-left: 38%;
+    width: 60%;
     color: white;
-   
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    right: 20%;
 }
 #citatiIspisMesto{
-    width: 90%;
-    position: relative;
-    top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
     font-size: 42px;
     font-family: 'Brush Script MT', 'Brush Script Std', cursive;
    
+}
+.pregledIPrecica{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+.pregledIPrecicaDobavljavca,.pregledIPrecicaRacuna,.pregledIPrecicaRobe{
+    background-color: rgb(66,66,66);
+    border: solid 2px rgb(194, 24, 91);
+    min-height: 150px;
+    width: 24%;
+    margin-left:7%;
+    text-align: center;
+}
+.pregledIPrecicaDobavljavca:hover,.pregledIPrecicaRacuna:hover,.pregledIPrecicaRobe:hover{
+    background-color: rgb(194, 24, 91);
+    border-color: white;
+    transform: scale(1.2)
 }
