@@ -22,5 +22,11 @@ export class FunkcijeSabloniService {
   getElement(element){
   return document.getElementById(element)
   }
+  show(element){
+    element.style.display="block"
+  }
+  hide(element){
+    element.style.display="none"
+  }
   
 }

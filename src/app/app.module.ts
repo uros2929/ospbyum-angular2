@@ -17,6 +17,7 @@ import { DokumentaComponent } from './dokumenta/dokumenta.component';
 import { KnjizenjeRobeComponent } from './knjizenje-robe/knjizenje-robe.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { CitatiComponent } from './citati/citati.component';
+import { RegistracijaPrijavaComponent } from './registracija-prijava/registracija-prijava.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CitatiComponent } from './citati/citati.component';
     DokumentaComponent,
     KnjizenjeRobeComponent,
     KontaktComponent,
-    CitatiComponent
+    CitatiComponent,
+    RegistracijaPrijavaComponent
   ],
   imports: [
     BrowserModule,
