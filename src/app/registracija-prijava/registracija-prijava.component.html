@@ -1,66 +1,84 @@
 <div class="prijavaRegistracija" id="prijavaRegistracija">
-  <form action="?" method="GET" (submit)="ulogujKorisnika($event)">
-  <input type="text" name="username" placeholder="username">
-  <input type="password" name="pass" id="" placeholder="password">
-  <br>
-  <input type="button" value="Zaboravljena sifra" (click)="odjavaKorisnika($event)">
-  <input type="submit" value="Prijavi se">
-  <input type="button" value="Registuj se" (click)="otvoriFormuRegistracija()">
-</form>
+    <form action="?" method="GET" (submit)="ulogujKorisnika($event)">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="pass" id="" placeholder="password">
+        <br>
+        <input type="button" value="Zaboravljena sifra" (click)="zaboravljenaSifraFormaPrikaz()">
+        <input type="submit" value="Prijavi se">
+        <input type="button" value="Registuj se" (click)="otvoriFormuRegistracija()">
+    </form>
 </div>
 
 
 <div class="registracija" id="registracija">
-  <div class="izadjiIzFormeRegistracija" (click)="zatvoriFormuRegistracija()">X</div>
-      <form action="?" method="POST" id="formaRegistrujSe" (submit)="registujKorisnika($event)">
-          <label for="imeRegistracija">
-              <strong>Ime</strong>
-          </label>
-          <br>
-          <input type="text" name="imeRegistracija" placeholder="Ime" required>
-          <br>
-          <label for="prezimeRegistracija">
-              <strong>Prezime</strong>
-          </label>
-          <br>
-          <input type="text" name="prezimeRegistracija" placeholder="Prezime" required>
-          <br>
-          <label for="firmaRegistracija">
-              <strong>Firma</strong>
-          </label>
-          <br>
-          <input type="text" name="firmaRegistracija" placeholder="Firma" required>
-          <br>
-          <label for="emailRegistracija">
-              <strong>Email</strong>
-          </label>
-          <br>
-          <input type="email" name="emailRegistracija" placeholder="email" required>
-          <br>
-          <label for="passwordRegistracija">
-              <strong>Password</strong>
-          </label>
-          <br>
-          <input type="password" name="passwordRegistracija" placeholder="password" required>
-          <br>
-          <label for="potvrdiPasswordRegistracija">
-              <strong>Potvrdi password</strong>
-          </label>
-          <br>
-          <input type="password" name="potvrdiPasswordRegistracija"  placeholder="potvrdi password" required>
-          <br>
-          <label for="sifraFirmeRegistarcija">
-              <strong>Šifra iz firme</strong>
-          </label>
-          <br>
-          <input type="text" name="sifraFirmeRegistarcija" placeholder="Šifra iz firme" required>
-          <br>
-          <input type="submit" value="Registuj se">
-</form>
+    <div class="izadjiIzFormeRegistracija" (click)="zatvoriFormuRegistracija()">X</div>
+    <form action="?" method="POST" id="formaRegistrujSe" (submit)="registujKorisnika($event)">
+        <label for="imeRegistracija">
+            <strong>Ime</strong>
+        </label>
+        <br>
+        <input type="text" name="imeRegistracija" placeholder="Ime" required>
+        <br>
+        <label for="prezimeRegistracija">
+            <strong>Prezime</strong>
+        </label>
+        <br>
+        <input type="text" name="prezimeRegistracija" placeholder="Prezime" required>
+        <br>
+        <label for="firmaRegistracija">
+            <strong>Firma</strong>
+        </label>
+        <br>
+        <input type="text" name="firmaRegistracija" placeholder="Firma" required>
+        <br>
+        <label for="emailRegistracija">
+            <strong>Email</strong>
+        </label>
+        <br>
+        <input type="email" name="emailRegistracija" placeholder="email" required>
+        <br>
+        <label for="passwordRegistracija">
+            <strong>Password</strong>
+        </label>
+        <br>
+        <input type="password" name="passwordRegistracija" placeholder="password" required>
+        <br>
+        <label for="potvrdiPasswordRegistracija">
+            <strong>Potvrdi password</strong>
+        </label>
+        <br>
+        <input type="password" name="potvrdiPasswordRegistracija" placeholder="potvrdi password" required>
+        <br>
+        <label for="sifraFirmeRegistarcija">
+            <strong>Šifra iz firme</strong>
+        </label>
+        <br>
+        <input type="text" name="sifraFirmeRegistarcija" placeholder="Šifra iz firme" required>
+        <br>
+        <input type="submit" value="Registuj se">
+    </form>
 </div>
-
+<div class="zaboravljenaSifraForma" id="zaboravljenaSifraForma">
+    <div class="izadjiIzFormeZaboravljenaSifra" (click)="zatvoriFormuZaboravljenaSifra()">X</div>
+    <form action="?" method="post" (submit)="zaboravljenaSifra($event)">
+        <label for="odgovor" id="ukucajEmail">Email</label>
+        <br>
+        <br>
+        <input type="text" name="odgovorEmail" placeholder="Email">
+        <br>
+        <br>
+        <label for="odgovor">Šifra iz firme</label>
+        <br>
+        <br>
+        <input type="password" name="odgovor" placeholder="Šifra iz firme">
+        <br>
+        <br>
+        <input type="submit" value="Potvrdi" id="dugmePotvrdiProveru">
+        <h1 id="pokaziSifru"></h1>
+    </form>
+</div>
 <div class="odjava" id="odjava">
-  <h4>{{prikazPodatakaUlogovanogKorisnika}}</h4>
-  <h4>{{prikazEmailaUlogovanogKorisnika}}</h4>
-  <input type="button" value="odjavi se" (click)="odjavaKorisnika($event)">
+    <h4>{{prikazPodatakaUlogovanogKorisnika}}</h4>
+    <h4><a href="mailto:">{{prikazEmailaUlogovanogKorisnika}}</a></h4>
+    <input type="button" value="odjavi se" (click)="odjavaKorisnika($event)">
 </div>

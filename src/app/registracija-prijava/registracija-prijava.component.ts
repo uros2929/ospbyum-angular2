@@ -24,10 +24,12 @@ export class RegistracijaPrijavaComponent implements OnInit {
     this.proveraUlogovanogKorisnika()
   }
   proveraUlogovanogKorisnika() {
-    console.log(localStorage.getItem('Ulogovani korisnik'))
-    if (localStorage.getItem('Ulogovani korisnik') !== "") {
+    if (localStorage.getItem('Ulogovani korisnik') !== null) {
       this.funkcijeSabloni.hide(this.funkcijeSabloni.getElement('prijavaRegistracija'));
       this.funkcijeSabloni.show(this.funkcijeSabloni.getElement('odjava'))
+    }else{
+      this.funkcijeSabloni.show(this.funkcijeSabloni.getElement('prijavaRegistracija'));
+      this.funkcijeSabloni.hide(this.funkcijeSabloni.getElement('odjava'))
     }
   }
   otvoriFormuRegistracija() {
@@ -70,32 +72,51 @@ export class RegistracijaPrijavaComponent implements OnInit {
     this.funkcijeSabloni.setToLocalStorage('Ulogovani korisnik', username);
     alert('Uspesno ste se prijavili ! :)');
     this.funkcijeSabloni.hide(this.funkcijeSabloni.getElement('prijavaRegistracija'));
-    this.funkcijeSabloni.show(this.funkcijeSabloni.getElement('odjava'))
+    this.funkcijeSabloni.show(this.funkcijeSabloni.getElement('odjava'));
+    location.reload()
   }
 
 podatciUlogovanogKorisnika(){
-   let ulogovaniKorisnik=JSON.parse(localStorage.getItem('Ulogovani korisnik'));
-   if (ulogovaniKorisnik==="") {
+   if (this.registrovaniKorisnici[this.ulogovaniKorisnik]=== undefined) {
      return;
    }else{
-    let  imeUlogovanogKorisnika=this.registrovaniKorisnici[ulogovaniKorisnik][0],
-    prezimeUlogovanogKorisnika=this.registrovaniKorisnici[ulogovaniKorisnik][1],
+    let  imeUlogovanogKorisnika=this.registrovaniKorisnici[this.ulogovaniKorisnik][0],
+    prezimeUlogovanogKorisnika=this.registrovaniKorisnici[this.ulogovaniKorisnik][1],
     podatciUHTML=imeUlogovanogKorisnika+" "+ prezimeUlogovanogKorisnika;
     return podatciUHTML;
    }
 }
 emailUlogovanogKorisnika(){
-  let ulogovaniKorisnik=JSON.parse(localStorage.getItem('Ulogovani korisnik'));
-  if (ulogovaniKorisnik==="") {
-    return;
-  }else{
-    return ulogovaniKorisnik;
-  }
+  return this.ulogovaniKorisnik
 }
 odjavaKorisnika(event){
-event.preventDefault();
-this.funkcijeSabloni.setToLocalStorage('Ulogovani korisnik', "");
-this.funkcijeSabloni.show(this.funkcijeSabloni.getElement('prijavaRegistracija'));
-this.funkcijeSabloni.hide(this.funkcijeSabloni.getElement('odjava'))
+  event.preventDefault();
+this.funkcijeSabloni.removeFromLocalStorage('Ulogovani korisnik');
+this.proveraUlogovanogKorisnika()
 }
+zaboravljenaSifraFormaPrikaz(){
+  this.funkcijeSabloni.show(this.funkcijeSabloni.getElement('zaboravljenaSifraForma'))
+}
+zatvoriFormuZaboravljenaSifra(){
+  this.funkcijeSabloni.hide(this.funkcijeSabloni.getElement('zaboravljenaSifraForma'))
+}
+zaboravljenaSifra(event){
+  event.preventDefault();
+  let pokaziSifru=this.funkcijeSabloni.getElement('pokaziSifru'),
+  emailZaboravljenaSifra=event.target[0].value,
+  sifraFirmeZaboravljenaSifra=event.target[1].value;
+  if (this.registrovaniKorisnici[emailZaboravljenaSifra]=== undefined) {
+    alert('Pogresan email !')
+    return;
+  }else if (this.registrovaniKorisnici[emailZaboravljenaSifra][6] !== sifraFirmeZaboravljenaSifra) {
+    alert('Pogresan sifra firme !')
+    return;
+  }else{
+    pokaziSifru.innerHTML="Vasa sifra je: " + this.registrovaniKorisnici[emailZaboravljenaSifra][4] + "<br><br>" + "Za 5 sekundi vratićemo vas na početnu stranicu";
+    setTimeout(()=>{
+      location.reload();
+    },5000)
+  }
+}
+
 }

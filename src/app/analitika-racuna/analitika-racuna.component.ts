@@ -29,10 +29,26 @@ export class AnalitikaRacunaComponent implements OnInit {
       potrazuje: potrazujeV,
       duguje: dugujeV
     }
+    if (this.funkcijeSabloni.proveraDaLiPostojiUlogovaniKorisnik() === null) {
+      alert('Uloguj se !');
+      return;
+    }
     if (datumV === "" || nazivStrankeV === "") {
       alert("Datum i naziv stranke su obavezni !")
       return;
-    } else {
+    } else if (this.analitikaRacunaLocal[datumV + "/" + nazivStrankeV] !== undefined) {
+      alert('Posotjeci datum i stranka !');
+     let potvrda=confirm('Ako zelis da izmenis podatke potvrdi !');
+     if (potvrda===false) {
+      return;
+     }else{
+      this.analitikaRacunaLocal[datumV + "/" + nazivStrankeV] = novaAnlitika;
+      this.funkcijeSabloni.setToLocalStorage('analitikaRacuna', this.analitikaRacunaLocal);
+      alert('Uspesno sacuvano !');
+      event.target.reset();
+      this.prikaziSacuvaneAnalitikeOnSubmit();
+    }
+    }else{
       this.analitikaRacunaLocal[datumV + "/" + nazivStrankeV] = novaAnlitika;
       this.funkcijeSabloni.setToLocalStorage('analitikaRacuna', this.analitikaRacunaLocal);
       alert('Uspesno sacuvano !');
@@ -119,6 +135,10 @@ export class AnalitikaRacunaComponent implements OnInit {
 
   }
   izbrisiSacuvanuAnalitiku(event) {
+    if (this.funkcijeSabloni.proveraDaLiPostojiUlogovaniKorisnik() === null) {
+      alert('Uloguj se !');
+      return;
+    }
     if (this.funkcijeSabloni.potvrda() === false) {
       return;
     } else {
@@ -141,5 +161,12 @@ export class AnalitikaRacunaComponent implements OnInit {
       }
 
     }
+  }
+  izmeniSacuvanuAnalitiku(event, datum, nazivStranke, duguje, potrazuje) {
+    event.preventDefault();
+    datum.value=this.analitikaRacunaLocal[event.target.id].datum;
+    nazivStranke.value=this.analitikaRacunaLocal[event.target.id].nazivStranke;
+    duguje.value=this.analitikaRacunaLocal[event.target.id].duguje;
+    potrazuje.value=this.analitikaRacunaLocal[event.target.id].potrazuje;
   }
 }

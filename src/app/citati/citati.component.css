@@ -11,7 +11,20 @@
     font-family: 'Brush Script MT', 'Brush Script Std', cursive;
    
 }
-.pregledIPrecica{
+.pregledKorisnika{
+    background-color: rgb(66,66,66);
+    border: solid 2px rgb(194, 24, 91);
+    min-height: 150px;  
+    width: 24%;
+    text-align: center;
+    margin: 1% auto;
+}
+.pregledKorisnika:hover{
+    background-color: rgb(194, 24, 91);
+    border-color: white;
+    transform: scale(1.2)
+}
+ .pregledIPrecica{
     display: flex;
     flex-direction: row;
     width: 80%;
@@ -30,4 +43,5 @@
     background-color: rgb(194, 24, 91);
     border-color: white;
     transform: scale(1.2)
-}
+} 
+

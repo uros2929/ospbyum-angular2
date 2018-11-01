@@ -11,6 +11,7 @@ export class CitatiComponent implements OnInit {
   brojDobavljacaInfoIspis=this.brojDobavljacaInfo();
   brojRacunaIzAnalitikeInfoIspis=this.brojRacunaIzAnalitikeInfo();
   brojPostojecihProizvodaInfoIspis=this.brojPostojecihProizvodaInfo();
+  brojKorisnika=this.brojKorisnikaIzLocala();
 
   constructor( private funkcijeSabloni:FunkcijeSabloniService) { }
 
@@ -111,8 +112,9 @@ export class CitatiComponent implements OnInit {
     return brojRobaNiz.length
 
   }
-  precicaZaNabavku(event){
-    event.preventDefault();
-    console.log('aaaa')
-  }
+ brojKorisnikaIzLocala(){
+   let brojRegistovanihKorisnika=this.funkcijeSabloni.getFromLocalStorage('registrovaniKorisnici'),
+   brojKorisnikaNiz=Object.keys(brojRegistovanihKorisnika);
+   return brojKorisnikaNiz.length;
+ }
 }

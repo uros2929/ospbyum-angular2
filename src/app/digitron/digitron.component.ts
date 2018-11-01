@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FunkcijeSabloniService } from '../funkcije-sabloni.service';
 
 @Component({
   selector: 'app-digitron',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DigitronComponent implements OnInit {
 
-  constructor() { }
+  constructor(private funkcijeSabloni:FunkcijeSabloniService) { }
 
   ngOnInit() {
   }
@@ -19,6 +20,10 @@ export class DigitronComponent implements OnInit {
 
   racunanje(event, inputZaBrojeve) {
     event.preventDefault();
+    if (this.funkcijeSabloni.proveraDaLiPostojiUlogovaniKorisnik()===null) {
+      alert('Uloguj se !');
+      return;
+    }
     let novRezultat = "n/a";
     try {
       novRezultat = eval(inputZaBrojeve.value)

@@ -28,5 +28,7 @@ export class FunkcijeSabloniService {
   hide(element){
     element.style.display="none"
   }
-  
+  proveraDaLiPostojiUlogovaniKorisnik(){
+   return localStorage.getItem('Ulogovani korisnik')
+  }
 }

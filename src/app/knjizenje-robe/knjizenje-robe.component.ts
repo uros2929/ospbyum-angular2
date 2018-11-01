@@ -23,6 +23,10 @@ export class KnjizenjeRobeComponent implements OnInit {
   sacuvajNoviProizvod(event) {
     event.preventDefault();
     let kljucSacuvaneRobe = event.target[0].value;
+    if (this.funkcijeSabloni.proveraDaLiPostojiUlogovaniKorisnik()===null) {
+      alert('Uloguj se !');
+      return;
+    }
     for (let index = 0; index < 4; index++) {
       this.sacuvanaRobaNiz.push(event.target[index].value)
     }
@@ -66,6 +70,10 @@ export class KnjizenjeRobeComponent implements OnInit {
   }
   izbrisiProizvod(event) {
     event.preventDefault();
+    if (this.funkcijeSabloni.proveraDaLiPostojiUlogovaniKorisnik()===null) {
+      alert('Uloguj se !');
+      return;
+    }
     if (this.funkcijeSabloni.potvrda() === false) {
       return;
     } else {

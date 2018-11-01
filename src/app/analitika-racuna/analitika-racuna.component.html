@@ -1,9 +1,9 @@
 <div class="formaAnalitikeRacuna">
   <form action="?" method="post" (submit)="sacuvajAnalitikuRacuna($event)">
-    <input type="date" name="datum">
-    <input type="text" name="stranka"  placeholder="Naziv stranke">
-    <input type="number" name="duguje" placeholder="Duguje">
-    <input type="number" name="potrazuje"  placeholder="Potražuje">
+    <input type="date" name="datum" #datum>
+    <input type="text" name="stranka"  placeholder="Naziv stranke" #nazivStranke>
+    <input type="number" name="duguje" placeholder="Duguje" #duguje>
+    <input type="number" name="potrazuje"  placeholder="Potražuje" #potrazuje>
     <br>
     <input type="submit" value="Sačuvaj" (submit)="sacuvajAnalitikuRacuna($event)">
   </form>
@@ -13,6 +13,7 @@
       <input type="text" class="inputPretrazi" placeholder="Pretrazi racune ..." (keyup)="pretrazi(analitikaInput)" #analitikaInput>
     <li *ngFor="let analitika of analitikaRacuna">
         <p id="{{analitika}}" (click)="prikaziSacuvanuAnalitiku($event)">{{analitika}}</p> 
+        <em id="{{analitika}}" (click)="izmeniSacuvanuAnalitiku($event,datum,nazivStranke,duguje,potrazuje)">izmeni</em>
         <em id="{{analitika}}" (click)="izbrisiSacuvanuAnalitiku($event)">izbrisi</em>
     </li>
   </ul>
