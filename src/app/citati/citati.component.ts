@@ -12,6 +12,7 @@ export class CitatiComponent implements OnInit {
   brojRacunaIzAnalitikeInfoIspis=this.brojRacunaIzAnalitikeInfo();
   brojPostojecihProizvodaInfoIspis=this.brojPostojecihProizvodaInfo();
   brojKorisnika=this.brojKorisnikaIzLocala();
+  brojFakturi=this.brojFakturiIzLocala();
 
   constructor( private funkcijeSabloni:FunkcijeSabloniService) { }
 
@@ -116,5 +117,10 @@ export class CitatiComponent implements OnInit {
    let brojRegistovanihKorisnika=this.funkcijeSabloni.getFromLocalStorage('registrovaniKorisnici'),
    brojKorisnikaNiz=Object.keys(brojRegistovanihKorisnika);
    return brojKorisnikaNiz.length;
+ }
+ brojFakturiIzLocala(){
+   let brojSacuvanihFakturiObjekat=this.funkcijeSabloni.getFromLocalStorage('sacuvaneFakture'),
+   brojSacuvanihFakturiNiz=Object.keys(brojSacuvanihFakturiObjekat);
+   return brojSacuvanihFakturiNiz.length
  }
 }

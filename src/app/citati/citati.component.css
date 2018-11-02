@@ -44,4 +44,17 @@
     border-color: white;
     transform: scale(1.2)
 } 
+.pregledIPrecicaFakture{
+    background-color: rgb(66,66,66);
+    border: solid 2px rgb(194, 24, 91);
+    min-height: 150px;  
+    width: 24%;
+    text-align: center;
+    margin: 2% auto;
+}
+.pregledIPrecicaFakture:hover{
+    background-color: rgb(194, 24, 91);
+    border-color: white;
+    transform: scale(1.2)
+}
 
