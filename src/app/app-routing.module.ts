@@ -10,6 +10,7 @@ import { DokumentaComponent } from './dokumenta/dokumenta.component';
 import { KnjizenjeRobeComponent } from './knjizenje-robe/knjizenje-robe.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { CitatiComponent } from './citati/citati.component';
+import { DokumentaFakturaComponent } from './dokumenta-faktura/dokumenta-faktura.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'Analitika-racuna', component: AnalitikaRacunaComponent },
   { path: 'Dokumenta', component: DokumentaComponent },
   { path: 'Knjizenje-robe', component: KnjizenjeRobeComponent },
-  { path: 'Kontakt', component: KontaktComponent }
+  { path: 'Kontakt', component: KontaktComponent },
+  { path: 'Faktura', component: DokumentaFakturaComponent }
 ];
 
 @NgModule({

@@ -1,0 +1,121 @@
+#dugmeDodajRed,#resetujFakturu,#stampajFakturu,#sacuvajFakturu{
+    background-color: rgb(30,34,34);
+    color: white;
+    height: 45px;
+    width: 22%;
+    margin-left: 2%;        
+    margin-bottom: 3%;
+}
+#dugmeDodajRed:hover,#resetujFakturu:hover,#stampajFakturu:hover,#sacuvajFakturu:hover{
+    background-color: rgb(63,63,66);
+    border-color: rgb(255, 85, 0);
+}
+#sacuvaneFakture{
+    border: solid 2px white; 
+    position: absolute;
+    width: 20%;
+    margin-left: 2%;
+    min-height: 14.8cm;
+    overflow-y: scroll;
+    background-color: rgb(63,63,66);
+    top: 19%;
+   
+}
+#sacuvaneFakture li{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#sacuvaneFakture p{
+width: 30%;
+cursor: pointer;
+}
+#sacuvaneFakture p:hover{
+    color: rgb(194, 24, 91)
+}
+#sacuvaneFakture em{
+margin-left: 35%;
+margin-top: 5%;
+width: 20%;
+cursor: pointer;
+}
+#sacuvaneFakture em:hover{
+    color: rgb(72,181,140);
+}
+
+#listaFakture li{
+    color: white;
+    font-size: 24px;
+    margin-top: 3%;
+    cursor: pointer;
+}
+#listaFakture li em{
+   position: relative;
+   float: right;
+   margin-right: 5%;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    border-radius: 25%;
+}
+#listaFakture li em:hover{
+   color: red;
+   border-color: red;
+}
+#fakturaA4{
+    height:29.7cm;
+    width:21cm;
+    border: solid 1px black;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 2px rgb(63,63,66);
+    background-color: white;
+    color: black;
+} 
+#fakturaA4>form>input{
+    border: none;
+    border-bottom: solid 1px black;
+}
+.podatci>form>input{
+    border: none;
+    border-bottom: solid 1px black;
+}
+h1{
+    position: relative;
+    float: left;
+    margin-left: 2%;
+    height: 0px;
+}
+h3{
+    margin-left: 2%;
+}
+
+.podatciPosiljaocPrimaoc{
+    position: relative;
+    float: left;
+    top: 3%;
+}
+.fakturapodatci{
+    position: relative;
+    float: right;
+    justify-content: flex-end;
+}
+
+#tabelaFakture{
+    display: table;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 96%;
+}
+table {
+    border-collapse: collapse;
+}
+.tabelaKolicinaH{width: 20%;text-align: center; border: 2px solid black;}
+.tabelaCenaH{width: 20%;text-align: center; border: 2px solid black;}
+.opisInputH{width: 20%;text-align: center; border: 2px solid black;}
+.tabelaOpisH{width:20%;text-align: center; border: 2px solid black;}
+.tabelaBR{border: 2px solid black;width: 8%; text-align: center;}
+table, th, td {
+    border: 1px solid black;
+}
+

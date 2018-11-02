@@ -1,0 +1,109 @@
+<div id="sacuvaneFakture">
+    <ul>
+      <li *ngFor="let faktura of sacuvaneFakture" id="{{faktura}}">
+          <p (click)=" izmeniFakturu($event)" id="{{faktura}}">{{faktura}}</p> <em id="{{faktura}}" (click)="izbrisiFakturu($event)">izbrisi</em>
+      </li>
+    </ul>
+  </div>
+<div id="mainFaktura"> 
+<button id="dugmeDodajRed" (click)="pravljenjeRedovaTabele($event,kolicina,opis,cenaPoJedinici,ukupno)">Dodaj red</button>
+<button id="resetujFakturu" (click)="resetujFakturu($event)">Resetuj fakturu</button>
+<button id="stampajFakturu">Štampaj</button>
+<button id="sacuvajFakturu" (click)="sacuvajFakturu($event)">Sačuvaj</button>
+
+<div id="fakturaA4">
+  <h1>FAKTURA</h1>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <form action="?" method="POST" id="fakturaPodatci" >
+    <div class="fakturapodatci">
+    <label for="fakturaBroj">FAKTURA BR.:</label>
+    <input type="text" name="fakturaBroj" id="fakturaBroj"><br>
+    <label for="datum">DATUM:</label>
+    <input type="text" name="datum" id="datum">
+  </div>
+  <div class="podatciPosiljaocPrimaoc">
+    
+      <label for="imePreduzecaPosiljaoca">Ime Preduzeća:</label>
+      <input type="text" name="imePreduzeca" id="imePreduzecaPosiljaoca">
+      <br>
+      <label for="adresaPreduzeca">Adresa preduzeća:</label>
+      <input type="text" name="adresaPreduzeca" id="adresaPreduzeca">
+      <br>
+      <label for="telefon">Telefon:</label>
+      <input type="text" name="telefon" id="telefon">
+      <br>
+   
+    <h3>Za:</h3>
+    
+      <label for="imePrimaoca">Ime primaoca:</label>
+      <input type="text" name="imePrimaoca" id="imePrimaoca">
+      <br>
+      <label for="imePreduzecaPrimaoca">Ime preduzeća:</label>
+      <input type="text" name="imePreduzeca" id="imePreduzecaPrimaoca">
+      <br>
+      <label for="ulicaIBroj">Ulica i broj:</label>
+      <input type="text" name="ulicaIBroj" id="ulicaIBroj">
+      <br>
+      <label for="gradDrzavaPPB">Grad,država,poštanski broj:</label>
+      <input type="text" name="gradDrzavaPPB" id="gradDrzavaPPB">
+      <br>
+      <label for="telefonPrimaoca">Telefon:</label>
+      <input type="text" name="telefonPrimaoca" id="telefonPrimaoca">
+  </div>
+</form>
+  <br>
+  <br>
+  <br>
+  <div id="tabelaFaktureSve">
+    <table id="tabelaFakture">
+      <thead>
+        <tr>
+            <th class="tabelaBR">res</th>
+            <th class="tabelaKolicinaH"><input type="number" name="KOLICINA" placeholder="KOLICINA" #kolicina></th>
+            <th class="tabelaOpisH"><input type="text" name="OPIS" placeholder="OPIS" #opis></th>
+            <th class="tabelaCenaH"><input type="number" name="CENA PO JEDINICI" placeholder="CENA PO JEDINICI" #cenaPoJedinici></th>
+            <th class="tabelaCenaH"><input type="number" name="UKUPNO" placeholder="UKUPNO" #ukupno></th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let rowContent of rows">
+          <td class="tabelaBR" id="del" (click)="izbrisiRedTabele($event)">del</td>
+          <td class='tabelaKolicinaH'>{{rowContent[0]}}</td>
+          <td class='tabelaOpisH'>{{rowContent[1]}}</td>
+          <td class='tabelaCenaH'>{{rowContent[2]}}</td>
+          <td class='tabelaCenaH'>{{rowContent[3]}}</td>
+        </tr>
+    </tbody>
+    </table>
+  </div>
+  <br>
+  <form action="?" method="POST" id="ukupneVrednosti" style="position: relative; left: 2%">
+
+    <strong>MEĐUVREDNOST: </strong>
+
+    <input type="text" placeholder="Unesite međuvrednosti" name="medjuvrednosti" id="medjuvrednosti" style="width: 30%">
+    <br>
+
+    <strong>POREZ NA PROMET: </strong>
+
+    <input type="text" placeholder="Unesite porez na promet" name="porezNaPromet" id="porezNaPromet" style="width: 28%">
+    <br>
+
+    <strong>UKUPNO DUGOVANJE: </strong>
+
+    <input type="text" placeholder="Unesite ukupno dugovanje" name="ukupnoDugovanje" id="ukupnoDugovanje" style="width: 25%">
+  </form>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div id="hvala" style="width: 96%;text-align: center;">
+    <h2>HVALA NA SARADNJI!</h2>
+  </div>
+
+</div>

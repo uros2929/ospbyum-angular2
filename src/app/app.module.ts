@@ -18,6 +18,7 @@ import { KnjizenjeRobeComponent } from './knjizenje-robe/knjizenje-robe.componen
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { CitatiComponent } from './citati/citati.component';
 import { RegistracijaPrijavaComponent } from './registracija-prijava/registracija-prijava.component';
+import { DokumentaFakturaComponent } from './dokumenta-faktura/dokumenta-faktura.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { RegistracijaPrijavaComponent } from './registracija-prijava/registracij
     KnjizenjeRobeComponent,
     KontaktComponent,
     CitatiComponent,
-    RegistracijaPrijavaComponent
+    RegistracijaPrijavaComponent,
+    DokumentaFakturaComponent
   ],
   imports: [
     BrowserModule,
