@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MainOspbyumComponent } from './main-ospbyum/main-ospbyum.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { KalendarComponent } from './kalendar/kalendar.component';
@@ -23,7 +22,6 @@ import { DokumentaFakturaComponent } from './dokumenta-faktura/dokumenta-faktura
 @NgModule({
   declarations: [
     AppComponent,
-    MainOspbyumComponent,
     KalendarComponent,
     RokovnikComponent,
     DigitronComponent,
