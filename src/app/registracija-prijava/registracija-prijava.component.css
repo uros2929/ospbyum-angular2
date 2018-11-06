@@ -93,3 +93,19 @@ cursor: pointer;
 .zaboravljenaSifraForma input{
     text-align: center;
 }
+
+@media only screen and (max-width: 640px){
+
+.registracija{
+    right: 0%;
+    top: 200%;
+    width: 100%;
+    min-height: 540px;
+}
+#zaboravljenaSifraForma{
+    right: 0;
+    top: 200%;
+    min-height: 540px;
+    width: 100%;
+}
+}

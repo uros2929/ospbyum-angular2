@@ -67,3 +67,23 @@ footer button:hover{
     border-bottom: solid rgb(48, 48, 48);
     background-color: rgb(194, 24, 91);
 }
+
+@media only screen and (max-width:640px){
+    .rokovnikInput{
+        width: 75%;
+        font-size: 18px;
+    }
+    form{
+        margin-top: 3%;
+    }
+    .rokovnikDugmePostaviStavku{
+        font-size: 18px;
+        margin-left: 5%;
+    }
+    #mainRokovnik{
+        width: 95%;
+    }
+    #mainRokovnik li{
+       font-size: 22px;
+    }
+}

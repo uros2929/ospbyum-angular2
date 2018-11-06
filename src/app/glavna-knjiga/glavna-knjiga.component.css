@@ -112,3 +112,64 @@ overflow-y: scroll;
 .bilansStanjaLi:hover{
     color: rgb(194, 24, 91);
 }
+
+@media only screen and (max-width:1688px){
+.formaAktiva{
+    width: 30%;
+    margin-left: 24%;
+}
+.formaPasiva{
+    margin-right: 0;
+    width: 40%;
+}
+}
+@media only screen and (max-width:1014px){
+    .formaAktiva{
+        width: 46%;
+        margin-left: 0%;
+        left: 12%;
+    }
+    .formaPasiva{
+        margin-right: 0%;
+        width: 46%;
+        right: 0%;
+    }  
+}
+@media only screen and (max-width:725px){
+    .naslovGlavnaKnjiga{
+        margin: 0;
+    }
+    .aktivaNaslov,.pasivaNaslov{
+        display: none;
+    }
+    .formaAktiva{
+        width: 85%;
+        left: 3%;
+        margin-top: 3%;
+    }
+    .formaPasiva{
+       position: relative;
+       float: left;
+       width: 85%;
+       left: 3%;
+       margin-top: 3%;
+    }  
+    .rezultatAktivaTekst{
+        text-align: left;
+        margin-left: 6%;
+    }
+    .rezultatPasivaTekst{
+        float: left;
+    }
+    .dugmeResetuj,.dugmeSacuvaj{
+        margin: 0;
+        width: 20%;
+        margin-top: 3%;
+        margin-left: 15%;
+        font-size: 18px;
+       
+    }
+    .sacuvaniBilansiStanja{
+        width: 100%;
+    }
+}

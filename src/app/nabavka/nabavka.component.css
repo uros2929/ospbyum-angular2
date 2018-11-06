@@ -77,3 +77,27 @@
     display: table;
     margin: auto;
 }
+@media only screen and (max-width:950px){
+    .formaNabavka input[type="submit"]{
+        width: 31%;
+        margin-left: 35%;
+    }
+    .ispisEmailNabavka{
+        margin-left: 25%;
+        width: 50%; 
+    }
+}
+@media only screen and (max-width:640px){
+    .formaNabavka input[type="submit"]{
+        width: 40%;
+        margin-left: 30%;
+    }
+    .ispisEmailNabavka{
+        margin-left: 15%;
+        width: 70%; 
+    }
+    .formaNabavka input[type="email"]{
+        width: 50%;
+        margin-left: 25%;
+    }
+}

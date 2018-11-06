@@ -58,3 +58,21 @@
     transform: scale(1.2)
 }
 
+@media only screen and (max-width:640px){
+    .citatiDiv{
+        position: relative;
+        font-size: 30px;
+    }
+    .pregledIPrecica{
+        margin-left: 0;
+        width: 100%;
+    }
+    .pregledIPrecicaDobavljavca,.pregledIPrecicaRacuna,.pregledIPrecicaRobe{
+        width: 32%;
+        margin-left: 1%;
+    }
+    .pregledIPrecicaFakture,.pregledKorisnika{
+        width: 33%;
+    }
+}
+

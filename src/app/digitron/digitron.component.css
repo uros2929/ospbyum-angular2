@@ -27,3 +27,8 @@
     background-color:rgb(72,181,140);
     border-color: rgb(48, 48, 48); 
 }
+@media only screen and (max-width:640px){
+    .digitronInput input{
+        width: 100%;
+    }
+}
