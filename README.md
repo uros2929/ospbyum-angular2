@@ -1,3 +1,6 @@
+## Online [DEMO](https://uros2929.github.io/ospbyum-angular2/) version
+    Small changes in UI, because ghpages dont recognize some things! :/
+
 # OspbyumAngular2
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2.
