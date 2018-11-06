@@ -1,8 +1,6 @@
 <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
-        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-        [mode]="(isHandset$ | async) ? 'over' : 'side'"
-        [opened]="!(isHandset$ | async)">
+       >
       <mat-toolbar></mat-toolbar>
       <mat-nav-list>
         <a mat-list-item routerLink='/Kalendar'>Kalendar</a>
@@ -23,7 +21,7 @@
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+       >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
         <a class="naslovLink" routerLink='/' title="reload"><span class="naslov">OSPbyUM</span></a>
@@ -32,4 +30,13 @@
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
-  
+<!--  
+    IZBACENO ZBOG GHPAGES !!!
+
+  // app-component.html line 3
+// [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+// [mode]="(isHandset$ | async) ? 'over' : 'side'"
+// [opened]="!(isHandset$ | async)"
+
+// app-component.html line 24
+// *ngIf="isHandset$ | async" -->
