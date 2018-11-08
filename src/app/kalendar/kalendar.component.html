@@ -1,3 +1,9 @@
-<p>
-  kalendar works!
-</p>
+<div class="kalendar">
+  <div *ngFor="let mesec of kalendar.meseci" class="mesec">
+    <div class="mesecUnutrasnji">
+    <div *ngFor="let dan of mesec.dani" class="dani" (click)="onClick($event)">
+        {{dan}}
+    </div>
+  </div>
+  </div>
+</div>

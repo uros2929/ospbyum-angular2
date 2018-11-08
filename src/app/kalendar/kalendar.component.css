@@ -1,0 +1,20 @@
+.kalendar{
+    margin: auto;
+    width: 100%;
+}
+.mesec{
+    width: 50%;
+    padding: 3%
+}
+.mesecUnutrasnji{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+   min-height: 250px;
+}
+.dani{
+    width: 14%;
+    height: 15px;
+   font-style: italic;
+}
